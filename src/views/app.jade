@@ -1,0 +1,17 @@
+extends ./base.jade
+block append style
+    link(href="/assets/style.css", rel="stylesheet",type="text/css")
+block body
+
+    nav#logout
+        a(href="/logout") Logout
+    div
+    canvas#mainCanvas
+    div#tools
+        form
+        | Line Width:
+        input#lineWidthSlider(type='range', name='points', min='1', max='20')
+        button#eraserBtn(type='button') Eraser
+        button#penBtn(type='button')  Pen 
+block scripts
+    script(src="/assets/app.js")
